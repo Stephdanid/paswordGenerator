@@ -48,26 +48,7 @@ function generatePassword() {
 
 
 
-// function randomizer() { Math.floor(Math.random(lowerCase + upperCase + specialChar + numberChar)) }
 
-// function generatePassword() {}
-// // for loop anywhere?
-// let chosenOpt = lCaseOpt.concat(uCaseOpt, spcCharOpt, numCharOpt)
-// console.log(chosenOpt)
-
-// notes from class
-// let test =[1,200,45,64,83,45,86,]
-// test[2] = 45
-// test[2.333233] 
-// would be undefined
-
-// generating randomly password (using a forloop start with 8 to 128 using arrays?)
-// made my arrays,used the console how to generate a random string? Math.random uses numbers
-// Math.floor(Math.random()*lowerCase.length) *number will never be more than that array so lowercasearray[20] = "u"
-// or .split will make into the 26 length array? so after saying yes *use if statments to randomly choose from to create a new array from userInput
-// .CONCAT! *use .concat capitals were from excitement* lowerCase.split("").concat(numchar).length ~36
-// second way uses dot notation? example for my code would be [...lowerCase.split(""),...upperCase.split("")];
-// generate a number using this new array go back to ROCK PAPER SCISSORS
 
 
 
