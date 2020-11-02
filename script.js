@@ -7,7 +7,7 @@ let numberChar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 //Initial question and popping alert for userInput 
 function generatePassword() {
     let userInput = prompt("How many characters would you like to use?")
-    console.log(userInput)
+
 
     if (userInput < 8 || userInput > 128 || isNaN(parseInt(userInput))) {
         alert("This page needs a number from 8 to 128 to continue")
@@ -20,7 +20,7 @@ function generatePassword() {
     let numCharOpt = confirm("Would you like to have numbers in your password?");
 
     let chosenOpt = []
-    let generatedPassword = ""
+    let passwordFinal = ""
 
     if (lCaseOpt === true) {
         chosenOpt.push(lowerCase)
@@ -35,16 +35,22 @@ function generatePassword() {
     if (numCharOpt === true) {
         chosenOpt.push(numberChar)
     }
-    let allOptions = chosenOpt.flat()
-    Math.floor(Math.random * chosenOpt.length)
+    // console logged chosenOpt creates array accordingly
+    let allOptions = chosenOpt[
+        Math.floor(Math.random * chosenOpt.length)];
 
     for (let i = 0; i < userInput; i++) {
-        const opt = allOptions[i];
+        console.log(allOptions)
 
     }
-    chosenOpt.concat(generatedPassword);
+
+    // concat method?
+
+
+
 
 }
+
 
 
 
@@ -68,6 +74,7 @@ function writePassword() {
     passwordText.value = password;
 
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
