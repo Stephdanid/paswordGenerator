@@ -23,30 +23,34 @@ function generatePassword() {
     let passwordFinal = ""
 
     if (lCaseOpt === true) {
-        chosenOpt.push(lowerCase)
+        chosenOpt = chosenOpt.concat(lowerCase)
     }
 
     if (uCaseOpt === true) {
-        chosenOpt.push(upperCase)
+        chosenOpt = chosenOpt.concat(upperCase)
     }
     if (spcCharOpt === true) {
-        chosenOpt.push(specialChar)
+
+        chosenOpt = chosenOpt.concat(specialChar)
+
     }
     if (numCharOpt === true) {
-        chosenOpt.push(numberChar)
+        chosenOpt = chosenOpt.concat(numberChar)
     }
     // console logged chosenOpt creates array accordingly
-    let allOptions = chosenOpt[
-        Math.floor(Math.random * chosenOpt.length)];
+
 
     for (let i = 0; i < userInput; i++) {
-        console.log(allOptions)
+        let allOptions = chosenOpt[
+            Math.floor(Math.random() * chosenOpt.length)];
+
+        passwordFinal = passwordFinal + allOptions
 
     }
+    console.log(passwordFinal)
 
-    // concat method?
 
-
+    return passwordFinal
 
 
 }
